@@ -8,16 +8,6 @@
             "sizes": "any",
             "type": "image/svg+xml",
             "purpose": "any maskable"
-        },
-        {
-            "src": "favicon-32x32.svg",
-            "sizes": "32x32",
-            "type": "image/svg+xml"
-        },
-        {
-            "src": "favicon-16x16.svg",
-            "sizes": "16x16",
-            "type": "image/svg+xml"
         }
     ],
     "start_url": "/",

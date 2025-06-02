@@ -1261,6 +1261,16 @@ p {
     .hero-buttons {
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
     }
 
     .section-title {
