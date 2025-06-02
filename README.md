@@ -39,36 +39,6 @@ This portfolio demonstrates the power of AI-assisted development while maintaini
 - **💼 Project Portfolio** - Featured projects with technology stacks
 - **📞 Contact Section** - Professional contact information and call-to-action
 
-## 🛠️ Technologies Used
-
-### Programming Languages
-- **Python** - Backend development
-- **PHP** - Server-side scripting
-- **JavaScript** - Frontend interactivity
-- **Java** - Desktop applications
-
-### Backend Frameworks
-- **Django** - Python web framework
-- **Django REST Framework** - API development
-- **Laravel** - PHP web framework
-- **JavaFX** - Desktop GUI applications
-
-### Frontend Technologies
-- **Vue.js** - Progressive JavaScript framework
-- **Blade** - Laravel templating engine
-- **Tailwind CSS** - Utility-first CSS framework
-- **Bulma** - Modern CSS framework
-
-### Databases
-- **MySQL** - Relational database
-- **PostgreSQL** - Advanced relational database
-- **Firebase** - NoSQL cloud database
-
-### Tools & DevOps
-- **Git** - Version control
-- **Docker** - Containerization
-- **Problem Solving** - Analytical thinking
-
 ## 🎯 Project Structure
 
 ```
@@ -122,19 +92,6 @@ portfolio/
 - **LinkedIn**: [https://www.linkedin.com/in/syrspondon/](https://linkedin.com/in/samin-yeaser-rahman)
 - **GitHub**: [github.com/syrspondon](https://github.com/syrspondon)
 
-## 🏆 Key Achievements
-
-- **Research Publication**: "Active & Idle Virtual Machine Migrations in Cloud Computing"
-- **Programming Contest**: 3rd place at BRACU Intra University Programming Contest 2017
-
-## 🔧 Customization
-
-Feel free to fork this project and customize it for your own portfolio:
-
-1. Update personal information in `index.html`
-2. Modify colors and styling in `styles.css`
-3. Add your own projects and experience
-4. Replace `resume.pdf` with your own resume
 
 ## 📄 License
 
@@ -150,5 +107,3 @@ If you find any bugs or have suggestions for improvements, please feel free to:
 ---
 
 **Built with ❤️ by Samin Yeaser Rahman**
-
-*Available for freelance projects and full-time opportunities* 
