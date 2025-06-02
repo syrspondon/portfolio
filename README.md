@@ -93,7 +93,7 @@ portfolio/
 
 - **Email**: [samin.y.r.spondon@gmail.com](mailto:samin.y.r.spondon@gmail.com)
 - **Phone**: +880172110195
-- **LinkedIn**: [linkedin.com/in/samin-yeaser-rahman](https://linkedin.com/in/samin-yeaser-rahman)
+- **LinkedIn**: [https://www.linkedin.com/in/syrspondon/](https://linkedin.com/in/samin-yeaser-rahman)
 - **GitHub**: [github.com/syrspondon](https://github.com/syrspondon)
 
 ## 🏆 Key Achievements
