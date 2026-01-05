@@ -43,11 +43,18 @@ This portfolio demonstrates the power of AI-assisted development while maintaini
 
 ```
 portfolio/
-├── index.html          # Main HTML file
-├── styles.css          # CSS styles and themes
-├── script.js           # JavaScript functionality
-├── resume.pdf          # Downloadable resume
-└── README.md           # Project documentation
+├── assets/
+│   ├── images/          # Profile images
+│   └── favicon.svg      # Site favicon
+├── css/
+│   └── styles.css       # Main stylesheet
+├── js/
+│   └── main.js          # Optimized JavaScript (modular, class-based)
+├── index.html           # Main HTML file
+├── resume.pdf           # Downloadable resume
+├── site.webmanifest     # PWA manifest
+├── .gitignore           # Git ignore rules
+└── README.md            # Project documentation
 ```
 
 ## 🚀 Live Demo
