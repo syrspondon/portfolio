@@ -466,6 +466,8 @@ p {
     margin-bottom: 1rem;
     opacity: 0;
     animation: fadeInUp 1s ease 0.2s forwards;
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 [data-theme="light"] .hero-title {
@@ -478,10 +480,12 @@ p {
     margin-bottom: 1rem;
     opacity: 0;
     animation: fadeInUp 1s ease 0.4s forwards;
+    font-weight: 500;
+    color: var(--accent-color);
 }
 
 [data-theme="light"] .hero-subtitle {
-    color: white;
+    color: var(--accent-color);
     text-shadow: 0 3px 10px rgba(0, 0, 0, 0.8), 0 2px 4px rgba(0, 0, 0, 0.7);
 }
 
