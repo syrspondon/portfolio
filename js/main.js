@@ -159,7 +159,7 @@ class ScrollProgress {
             width: 0%;
             height: 4px;
             background: linear-gradient(90deg, #3b82f6, #06b6d4);
-            z-index: 1001;
+            z-index: 999;
             transition: width 0.1s ease;
             box-shadow: 0 2px 10px rgba(59, 130, 246, 0.3);
         `;
@@ -217,18 +217,6 @@ class AnimationManager {
     }
 
     setupInteractiveElements() {
-        // Skill tags hover effect
-        const skillTags = document.querySelectorAll('.skill-tag');
-        skillTags.forEach(tag => {
-            tag.addEventListener('mouseenter', () => {
-                tag.style.transform = 'scale(1.05)';
-            });
-
-            tag.addEventListener('mouseleave', () => {
-                tag.style.transform = 'scale(1)';
-            });
-        });
-
         // Project and achievement cards tilt effect
         const cards = document.querySelectorAll('.project-card, .achievement-card');
         cards.forEach(card => {
@@ -310,6 +298,104 @@ class Preloader {
 }
 
 // ============================================
+// PARTICLES EFFECT
+// ============================================
+
+class ParticlesEffect {
+    constructor() {
+        this.container = document.getElementById('particles');
+        if (!this.container) return;
+
+        this.particlesCount = 50;
+        this.particles = [];
+        this.init();
+    }
+
+    init() {
+        for (let i = 0; i < this.particlesCount; i++) {
+            this.createParticle();
+        }
+        this.animate();
+    }
+
+    createParticle() {
+        const particle = document.createElement('div');
+        particle.style.cssText = `
+            position: absolute;
+            width: ${Math.random() * 4 + 1}px;
+            height: ${Math.random() * 4 + 1}px;
+            background: rgba(59, 130, 246, ${Math.random() * 0.5 + 0.2});
+            border-radius: 50%;
+            pointer-events: none;
+        `;
+
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = Math.random() * 100 + '%';
+
+        const duration = Math.random() * 20 + 10;
+        const delay = Math.random() * 5;
+
+        particle.style.animation = `particleFloat ${duration}s ${delay}s infinite ease-in-out`;
+
+        this.container.appendChild(particle);
+        this.particles.push(particle);
+    }
+
+    animate() {
+        // Add CSS animation
+        if (!document.getElementById('particle-animation')) {
+            const style = document.createElement('style');
+            style.id = 'particle-animation';
+            style.textContent = `
+                @keyframes particleFloat {
+                    0%, 100% {
+                        transform: translate(0, 0) scale(1);
+                        opacity: 0;
+                    }
+                    10% {
+                        opacity: 1;
+                    }
+                    90% {
+                        opacity: 1;
+                    }
+                    50% {
+                        transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px) scale(1.5);
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+    }
+}
+
+// ============================================
+// TYPING EFFECT ENHANCEMENT
+// ============================================
+
+class TypingEffect {
+    constructor() {
+        this.textElement = document.querySelector('.typing-text');
+        if (!this.textElement) return;
+
+        this.text = this.textElement.textContent;
+        this.textElement.textContent = '';
+        this.index = 0;
+        this.speed = 80;
+
+        // Wait for initial fade-in animation
+        setTimeout(() => this.type(), 1500);
+    }
+
+    type() {
+        if (this.index < this.text.length) {
+            this.textElement.textContent += this.text.charAt(this.index);
+            this.index++;
+            setTimeout(() => this.type(), this.speed);
+        }
+    }
+}
+
+// ============================================
 // INITIALIZATION
 // ============================================
 
@@ -320,5 +406,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new ScrollProgress();
     new AnimationManager();
     new Preloader();
+    new ParticlesEffect();
+    new TypingEffect();
 });
 
