@@ -242,6 +242,12 @@ p {
     width: 100%;
 }
 
+.nav-link:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
 /* Theme Toggle Button Enhanced */
 .theme-toggle {
     background: linear-gradient(135deg, var(--bg-tertiary), var(--border-color));
@@ -286,6 +292,11 @@ p {
 .theme-toggle:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.theme-toggle:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 3px;
 }
 
 /* Theme Toggle Icons Enhanced */
@@ -645,6 +656,11 @@ p {
     border: 2px solid transparent;
 }
 
+.btn:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 3px;
+}
+
 .btn-primary {
     background: var(--primary-color);
     color: white;
@@ -832,7 +848,7 @@ p {
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     border: 1px solid var(--border-color);
 }
 
@@ -1042,7 +1058,7 @@ p {
     background: transparent;
     border-radius: 8px;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     padding: 1.5rem;
     border: 1px solid var(--border-color);
 }
@@ -1121,7 +1137,7 @@ p {
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     border: 1px solid var(--border-color);
 }
 
