@@ -84,6 +84,7 @@ class NavigationManager {
 
         // Initial update
         this.updateHeader();
+        this.updateActiveLink();
     }
 
     toggleMobileMenu() {
@@ -157,11 +158,11 @@ class ScrollProgress {
             top: 80px;
             left: 0;
             width: 0%;
-            height: 4px;
-            background: linear-gradient(90deg, #3b82f6, #06b6d4);
+            height: 3px;
+            background: #ffffff;
             z-index: 999;
             transition: width 0.1s ease;
-            box-shadow: 0 2px 10px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
         `;
         document.body.appendChild(progressBar);
 
@@ -320,11 +321,13 @@ class ParticlesEffect {
 
     createParticle() {
         const particle = document.createElement('div');
+        const opacity = Math.random() * 0.3 + 0.1;
+
         particle.style.cssText = `
             position: absolute;
-            width: ${Math.random() * 4 + 1}px;
-            height: ${Math.random() * 4 + 1}px;
-            background: rgba(59, 130, 246, ${Math.random() * 0.5 + 0.2});
+            width: ${Math.random() * 3 + 1}px;
+            height: ${Math.random() * 3 + 1}px;
+            background: rgba(255, 255, 255, ${opacity});
             border-radius: 50%;
             pointer-events: none;
         `;
