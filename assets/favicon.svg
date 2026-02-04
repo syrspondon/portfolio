@@ -1,15 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
-    </linearGradient>
-    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.3"/>
-    </filter>
-  </defs>
-  <rect width="64" height="64" rx="16" fill="url(#grad)" filter="url(#shadow)"/>
-  <circle cx="32" cy="32" r="28" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-  <text x="32" y="42" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="bold" fill="white" text-anchor="middle" filter="url(#shadow)">S</text>
-  <text x="32" y="42" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="bold" fill="rgba(255,255,255,0.9)" text-anchor="middle">S</text>
-</svg> 
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with rounded corners -->
+  <rect width="128" height="128" rx="24" fill="#000000"/>
+  
+  <!-- Left Bracket -->
+  <text x="42" y="82" font-family="'Courier New', monospace" font-size="90" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    {
+  </text>
+  
+  <!-- Right Bracket -->
+  <text x="86" y="82" font-family="'Courier New', monospace" font-size="90" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    }
+  </text>
+</svg>
