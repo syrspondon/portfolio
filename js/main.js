@@ -159,12 +159,23 @@ class ScrollProgress {
             left: 0;
             width: 0%;
             height: 3px;
-            background: #ffffff;
             z-index: 999;
             transition: width 0.1s ease;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
         `;
+
+        // Set initial color based on theme
+        this.updateProgressBarColor(progressBar);
+
         document.body.appendChild(progressBar);
+
+        // Update color when theme changes
+        const observer = new MutationObserver(() => {
+            this.updateProgressBarColor(progressBar);
+        });
+        observer.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ['data-theme']
+        });
 
         window.addEventListener('scroll', debounce(() => {
             const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -172,6 +183,17 @@ class ScrollProgress {
             const scrolled = (winScroll / height) * 100;
             progressBar.style.width = scrolled + '%';
         }, 10));
+    }
+
+    updateProgressBarColor(progressBar) {
+        const theme = document.documentElement.getAttribute('data-theme');
+        if (theme === 'light') {
+            progressBar.style.background = '#000000';
+            progressBar.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.2)';
+        } else {
+            progressBar.style.background = '#ffffff';
+            progressBar.style.boxShadow = '0 0 10px rgba(255, 255, 255, 0.3)';
+        }
     }
 }
 
